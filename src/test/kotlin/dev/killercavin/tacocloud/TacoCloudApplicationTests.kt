@@ -10,4 +10,9 @@ class TacoCloudApplicationTests {
 	fun contextLoads() {
 	}
 
+    @Test
+    fun tacoCloudHomeTest() {
+        TODO() // Test implementation soon
+    }
+
 }
