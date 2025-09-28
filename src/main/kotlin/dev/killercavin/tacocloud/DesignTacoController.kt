@@ -7,16 +7,17 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.ResponseStatus
 import org.springframework.web.bind.annotation.RestController
-
+import org.springframework.web.bind.annotation.SessionAttributes
 
 @RestController
-@RequestMapping("/tacos")
-class TacoCloudController{
-    private val logger: Logger = LoggerFactory.getLogger(TacoCloudController::class.java)
+@RequestMapping("/design")
+@SessionAttributes("tacoOrder")
+class DesignTacoController {
+    private val logger: Logger = LoggerFactory.getLogger(DesignTacoController::class.java)
 
     @GetMapping @ResponseStatus(HttpStatus.OK)
-    fun tacoCloud(): String {
-        logger.info("Running the taco cloud API landing...")
-        return "Taco Cloud API"
+    fun showDesign(): String {
+        logger.info("Running the taco design controller...")
+        return "Taco Design"
     }
 }
