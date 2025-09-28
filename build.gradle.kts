@@ -41,13 +41,6 @@ kotlin {
     }
 }
 
-sourceSets {
-    main {
-        java.srcDirs("src/main/kotlin", "src/main/java")
-        java.srcDirs("src/test/kotlin", "src/test/java")
-    }
-}
-
 tasks.withType<Test> {
     useJUnitPlatform()
 }
